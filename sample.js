@@ -1,4 +1,9 @@
 function myFunction() {
- document.getElementById("demo").innerHTML ='it changed';
- alert("testing");
+ if (confirm('are u handsome')) {
+	alert('your not');
+	return;
+} else {
+	alert('pathetic');
+	return;
+}
 }

@@ -1,26 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Rate Calculator</title>
-<link rel="icon" href="calculator_logo.png" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate Calculator</title>
+    <link rel="icon" href="rate.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<center>
-		</br> </br> </br> </br> </br> </br> 
-		PRINCIPAL AMOUNT: <input type="number" name="number1" maxlength="8" size="10" /> 
-		</br> </br> 
-		INTERES RATE(%): <input type="number" name="number2" maxlength="8" size="10" /> </br> </br>		
-		
-		<p>DAILY EARNING:</p>
-		
-		<p>MONTHLY EARNING:</p>
-		
-		<p>YEARLY EARNING:</p>
-		
-		<button id="a">Compute</button>
-	</center>
-</body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"> </script>
+
+<div class="container">
+    <div class="form-container">
+        <h2>Rate Calculator by carlo cutie</h2>
+
+        <label for="number1">Principal Amount:</label>
+        <input type="text" id="number1" maxlength="8" placeholder="Enter amount" oninput="formatWithCommas(this)" onkeypress="return isNumber(event)" />
+
+        <label for="number2">Interest Rate (%):</label>
+        <input type="number" id="number2" maxlength="8" placeholder="Enter rate" />
+
+        <p>Daily Earning: <span id="dailyEarning">0.00</span></p>
+        <p>Monthly Earning: <span id="monthlyEarning">0.00</span></p>
+        <p>Yearly Earning: <span id="yearlyEarning">0.00</span></p>
+
+        <button id="a">Compute</button>
+
+        <button id="b" disabled="true" onclick="window.open('https://www.lemoneyd.com/digital-savings', '_blank');">
+            Open Lemoneyd
+        </button>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="ratecalculator.js"></script>
+
+</body>
 </html>
